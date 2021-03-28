@@ -21,13 +21,14 @@ const About = () => {
       <div className='text-2xl text-center font-black'>
         <div class="relative mb-4 ">
             <label class="block ">
-                <label for="email" class="text-sm leading-7 text-gray-600">Macros</label>
+                <label for="email" class="text-sm leading-7 text-gray-600">Allergies</label>
                 <select
                     class="block w-full px-4 py-2 bg-gray-100 border-transparent rounded-lg focus:border-gray-500 focus:bg-white focus:ring-0">
-                    <option>Corporate event</option>
-                    <option>Wedding</option>
-                    <option>Birthday</option>
-                    <option>Other</option>
+                    <option>Dairy</option>
+                    <option>Nuts</option>
+                    <option>Shellfish</option>
+                    <option>Eggs</option>
+                    <option>Soy</option>
                 </select>
             </label>
         </div>
