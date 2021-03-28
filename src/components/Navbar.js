@@ -36,9 +36,6 @@ const Navbar = ({ toggle }) => {
         <Link to='/about' className='p-4'>
           About
         </Link>
-        <Link to='/contact' className='p-4'>
-          Contact
-        </Link>
       </div>
     </nav>
   );
