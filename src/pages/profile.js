@@ -1,6 +1,6 @@
 import React from 'react';
 
-const About = () => {
+const Profile = () => {
   return (
     <div className='grid grid-cols-4 gap-2 bg-white'>
       <div className='text-2xl text-center font-black'>
@@ -63,4 +63,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Profile;
