@@ -7,7 +7,7 @@ const Navbar = ({ toggle }) => {
       className='flex justify-between items-center h-16 bg-white text-black border-b-4 border-purple-900 relative shadow-sm font-sans'
       role='navigation'
     >
-      <Link to='/' className='pl-8'>
+      <Link to='/' className='font-semibold pl-8'>
         meNU
       </Link>
       <div className='px-4 cursor-pointer md:hidden' onClick={toggle}>

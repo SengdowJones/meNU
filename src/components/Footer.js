@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <div className='flex justify-center items-center h-16 bg-black text-white'>
+    <div className='flex justify-center items-center mt-3 h-10 bg-black text-white'>
       <p>Copyright © 2021 meNU</p>
     </div>
   );
