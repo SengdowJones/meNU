@@ -1,9 +1,16 @@
 import React from 'react';
 
-const Profile = () => {
-  return (
-    <div className='grid px-8 py-1 grid-cols-4 gap-12 bg-white'>
-      <div className='text-2xl text-center font-black'>
+class Profile extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      diet: "None"
+    }
+  }
+
+  render () {
+   return <div className='lg:text-xl md:text-sm grid px-12 py-1 grid-cols-4 gap-12 bg-white'>
+      <div className='text-center font-black'>
         <div className="relative">
             <label className="block ">
                 <label for="email" className="text-sm leading-7 text-gray-600">Diet</label>
@@ -18,7 +25,7 @@ const Profile = () => {
             </label>
         </div>
       </div>
-      <div className='text-2xl text-center font-black'>
+      <div className='text-center font-black'>
         <div className="relative">
             <label className="block ">
                 <label for="email" className="text-sm leading-7 text-gray-600">Allergies</label>
@@ -33,7 +40,7 @@ const Profile = () => {
             </label>
         </div>
       </div>
-      <div className='text-2xl text-center font-black'>
+      <div className='text-center font-black'>
         <div className="relative">
             <label className="block ">
               <label for="email" className="text-sm leading-7 text-gray-600">Nutrients</label>
@@ -85,7 +92,7 @@ const Profile = () => {
             </select>
         </div>
       </div>
-      <div className='text-2xl text-center font-black'>
+      <div className='text-center font-black'>
         <div className="relative">
             <label className="block ">
               <label for="email" className="text-sm leading-7 text-gray-600">Preferences</label>
@@ -124,9 +131,9 @@ const Profile = () => {
         </div>
       </div>
       <div><button class="mt-6 text-white bg-indigo-700 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-800 rounded text-lg">Save</button></div>
-    </div>
+    </div>;
     
-  );
+  }
 };
 
 export default Profile;
