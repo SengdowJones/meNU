@@ -36,14 +36,53 @@ const Profile = () => {
       <div className='text-2xl text-center font-black'>
         <div className="relative">
             <label className="block ">
-              <label for="email" className="text-sm leading-7 text-gray-600">Macros</label>
+              <label for="email" className="text-sm leading-7 text-gray-600">Nutrients</label>
             </label>
             <label className="text-gray-800 font-semibold text-sm">Carbohydrates</label>
-              <input type='text' placeholder="Enter percentage" className="block w-full px-4 py-2 bg-gray-100 border-transparent rounded-lg focus:border-gray-500 focus:bg-white focus:ring-0" />
+            <select
+              className="block w-full px-4 py-2 bg-gray-100 border-transparent rounded-lg focus:border-gray-500 focus:bg-white focus:ring-0">
+              <option>0%</option>
+              <option>10%</option>
+              <option>20%</option>
+              <option>30%</option>
+              <option>40%</option>
+              <option>50%</option>
+              <option>60%</option>
+              <option>70%</option>
+              <option>80%</option>
+              <option>90%</option>
+              <option>100%</option>
+            </select>
             <label className="text-gray-800 font-semibold text-sm">Fats</label>
-             <input type='text' placeholder="Enter percentage" className="block w-full px-4 py-2 bg-gray-100 border-transparent rounded-lg focus:border-gray-500 focus:bg-white focus:ring-0" />
+            <select
+              className="block w-full px-4 py-2 bg-gray-100 border-transparent rounded-lg focus:border-gray-500 focus:bg-white focus:ring-0">
+              <option>0%</option>
+              <option>10%</option>
+              <option>20%</option>
+              <option>30%</option>
+              <option>40%</option>
+              <option>50%</option>
+              <option>60%</option>
+              <option>70%</option>
+              <option>80%</option>
+              <option>90%</option>
+              <option>100%</option>
+            </select>
             <label className="text-gray-800 font-semibold text-sm">Protein</label>
-              <input type='text' placeholder="Enter percentage" className="block w-full px-4 py-2 bg-gray-100 border-transparent rounded-lg focus:border-gray-500 focus:bg-white focus:ring-0" />
+            <select
+              className="block w-full px-4 py-2 bg-gray-100 border-transparent rounded-lg focus:border-gray-500 focus:bg-white focus:ring-0">
+              <option>0%</option>
+              <option>10%</option>
+              <option>20%</option>
+              <option>30%</option>
+              <option>40%</option>
+              <option>50%</option>
+              <option>60%</option>
+              <option>70%</option>
+              <option>80%</option>
+              <option>90%</option>
+              <option>100%</option>
+            </select>
         </div>
       </div>
       <div className='text-2xl text-center font-black'>
