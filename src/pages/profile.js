@@ -5,7 +5,13 @@ class Profile extends React.Component {
     super()
     this.state = {
       diet: "None"
-    }
+    };
+
+    this.selectValue = this.selectValue.bind(this);
+  }
+
+  selectValue(event) {
+    this.setState({ diet: event.target.value });
   }
 
   render () {
@@ -14,13 +20,13 @@ class Profile extends React.Component {
         <div className="relative">
             <label className="block ">
                 <label for="email" className="text-sm leading-7 text-gray-600">Diet</label>
-                <select
+                <select id="dropdown" onChange={this.selectValue} value={this.state.diet} 
                     className="block w-full px-4 py-2 bg-gray-100 border-transparent rounded-lg focus:border-gray-500 focus:bg-white focus:ring-0">
-                    <option>None</option>
-                    <option>Vegetarian</option>
-                    <option>Balanced</option>
-                    <option>Avoiding Gluten</option>
-                    <option>Vegan</option>
+                    <option value="None">None</option>
+                    <option value="Vegetarian">Vegetarian</option>
+                    <option value="Balanced">Balanced</option>
+                    <option value="Avoiding Gluten">Avoiding Gluten</option>
+                    <option value="Vegan">Vegan</option>
                 </select>
             </label>
         </div>
