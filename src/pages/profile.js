@@ -4,23 +4,39 @@ class Profile extends React.Component {
   constructor() {
     super()
     this.state = {
-      diet: "None"
+      diet: "None",
+      allergies: [],
+      carbohydrates: 0,
+      fats: 0,
+      protein: 0,
+      calperday: "",
+      dailymeals: 3,
+      dininghall: ""
+
     };
 
-    this.selectValue = this.selectValue.bind(this);
+    this.selectDiet = this.selectDiet.bind(this);
+    this.selectAlle = this.selectAlle.bind(this);
   }
 
-  selectValue(event) {
+  selectDiet(event) {
     this.setState({ diet: event.target.value });
+    console.log(this.state.diet);
+  }
+
+  selectAlle(event) {
+    this.setState({ allergies: event.target.value });
+    console.log(this.state.allergies);
   }
 
   render () {
    return <div className='lg:text-xl md:text-sm grid px-12 py-1 grid-cols-4 gap-12 bg-white'>
+      
       <div className='text-center font-black'>
         <div className="relative">
             <label className="block ">
                 <label for="email" className="text-sm leading-7 text-gray-600">Diet</label>
-                <select id="dropdown" onChange={this.selectValue} value={this.state.diet} 
+                <select id="diet" onChange={this.selectDiet} value={this.state.diet} 
                     className="block w-full px-4 py-2 bg-gray-100 border-transparent rounded-lg focus:border-gray-500 focus:bg-white focus:ring-0">
                     <option value="None">None</option>
                     <option value="Vegetarian">Vegetarian</option>
@@ -31,11 +47,12 @@ class Profile extends React.Component {
             </label>
         </div>
       </div>
+
       <div className='text-center font-black'>
         <div className="relative">
             <label className="block ">
                 <label for="email" className="text-sm leading-7 text-gray-600">Allergies</label>
-                <select
+                <select id="allergies" onChange={this.selectAlle} value={this.state.allergies}
                     className="form-multiselect block w-full px-4 py-2 bg-gray-100 border-transparent rounded-lg focus:border-gray-500 focus:bg-white focus:ring-0" multiple>
                     <option>Dairy</option>
                     <option>Nuts</option>
@@ -46,6 +63,7 @@ class Profile extends React.Component {
             </label>
         </div>
       </div>
+
       <div className='text-center font-black'>
         <div className="relative">
             <label className="block ">
@@ -98,6 +116,7 @@ class Profile extends React.Component {
             </select>
         </div>
       </div>
+
       <div className='text-center font-black'>
         <div className="relative">
             <label className="block ">
@@ -106,16 +125,16 @@ class Profile extends React.Component {
             <label className="text-gray-800 font-semibold text-sm">Cal/Day</label>
             <select
                 className="block w-full px-4 py-2 bg-gray-100 border-transparent rounded-lg focus:border-gray-500 focus:bg-white focus:ring-0">
-                <option>1400 calories/day</option>
-                <option>1600 calories/day</option>
-                <option>1800 calories/day</option>
-                <option>2000 calories/day</option>
-                <option>2200 calories/day</option>
-                <option>2400 calories/day</option>
-                <option>2600 calories/day</option>
-                <option>2800 calories/day</option>
-                <option>3000 calories/day</option>
-                <option>3200 calories/day</option>
+                <option>1400 calories</option>
+                <option>1600 calories</option>
+                <option>1800 calories</option>
+                <option>2000 calories</option>
+                <option>2200 calories</option>
+                <option>2400 calories</option>
+                <option>2600 calories</option>
+                <option>2800 calories</option>
+                <option>3000 calories</option>
+                <option>3200 calories</option>
             </select>
             <label className="text-gray-800 font-semibold text-sm">Daily Meals</label>
             <select
@@ -136,7 +155,9 @@ class Profile extends React.Component {
                 </select>
         </div>
       </div>
+
       <div><button class="mt-6 text-white bg-indigo-700 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-800 rounded text-lg">Save</button></div>
+    
     </div>;
     
   }
